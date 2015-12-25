@@ -9,13 +9,13 @@ public class Java2dRandom extends JPanel{
     frame.getContentPane().add(app);
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setBounds(10, 10, 800, 800);
+    frame.setBounds(10, 10, 800, 1100);
     frame.setTitle("ランダム可視化");
     frame.setVisible(true);
     frame.setResizable(false);
     
     PaintOrisinal pa=new PaintOrisinal(frame);
-    for(int i=0;i<100000;i++){
+    for(int i=0;i<1000000;i++){
       pa.paintComponent(frame.getGraphics());
       try {
         Thread.sleep(1);

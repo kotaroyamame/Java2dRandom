@@ -43,10 +43,10 @@ public class PaintOrisinal extends JPanel{
     Random rnd = new Random();
     //for(int i=0;i<10;i++){
     int ran;
-    do{
+    //do{
       ran = rnd.nextInt(4);
       Math.floor(ran);
-    }while(Math.abs(old-ran)==2);//一回前の道を逆戻りしない設定
+    //}while(Math.abs(old-ran)==2);//一回前の道を逆戻りしない設定
     old=ran;
       this.ando(ran);
       ((Graphics2D) g).draw(new Line2D.Double(ar[0][0], ar[0][1], ar[1][0], ar[1][1]));
