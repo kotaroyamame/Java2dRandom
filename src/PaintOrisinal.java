@@ -60,9 +60,9 @@ public class PaintOrisinal extends JPanel{
   public void ando(int a){
     for(int[] xd:ar){
       for(int x:xd){
-        if(x<0||x>800){
+        if(x<0||x>1200){
           Arrays.fill(ar[0], 400);
-          Arrays.fill(ar[1], 400);
+          Arrays.fill(ar[1], 600);
         }
       }
     }
