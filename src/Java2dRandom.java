@@ -1,5 +1,8 @@
 import javax.swing.*;
 
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
 public class Java2dRandom extends JPanel{
   
   public static void main(String[] args){
@@ -15,10 +18,10 @@ public class Java2dRandom extends JPanel{
     frame.setResizable(false);
     
     PaintOrisinal pa=new PaintOrisinal(frame);
-    for(int i=0;i<1000000;i++){
+    for(int i=0;i<10000000;i++){
       pa.paintComponent(frame.getGraphics());
       try {
-        Thread.sleep(1);
+        Thread.sleep(5);
       } catch (InterruptedException e) {
           e.printStackTrace();
       }
