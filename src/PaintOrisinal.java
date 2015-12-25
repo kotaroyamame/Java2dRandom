@@ -10,31 +10,31 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class PaintOrisinal extends JPanel{
-  private static int[][] ar={{400,400},{400,400}};
+  private static int[][] ar={{600,400},{600,400}};
   private static int old;
   JFrame frame;
-  public PaintOrisinal() {
-    // TODO Auto-generated constructor stub
-    super();
-    this.render();
-  }
+//  public PaintOrisinal() {
+//    // TODO Auto-generated constructor stub
+//    super();
+//    this.render();
+//  }
   public PaintOrisinal(JFrame frame_) {
     // TODO Auto-generated constructor stub
     super();
     frame=frame_;
     //this.render();
   }
-  private void render(){
-    frame = new JFrame();
-
-    Java2dRandom app = new Java2dRandom();
-    frame.getContentPane().add(app);
-
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setBounds(10, 10, 800, 800);
-    frame.setTitle("ランダム可視化");
-    frame.setVisible(true);
-  }
+//  private void render(){
+//    frame = new JFrame();
+//
+//    Java2dRandom app = new Java2dRandom();
+//    frame.getContentPane().add(app);
+//
+//    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    frame.setBounds(10, 10, 1200, 800);
+//    frame.setTitle("ランダム可視化");
+//    frame.setVisible(true);
+//  }
   public void paintComponent(Graphics g){
     //Graphics2D g = (Graphics2D) frame.getGraphics();
     
@@ -44,7 +44,7 @@ public class PaintOrisinal extends JPanel{
     //for(int i=0;i<10;i++){
     int ran;
     //do{
-      ran = rnd.nextInt(4);
+      ran = rnd.nextInt(8);
       Math.floor(ran);
     //}while(Math.abs(old-ran)==2);//一回前の道を逆戻りしない設定
     old=ran;
@@ -74,12 +74,28 @@ public class PaintOrisinal extends JPanel{
         ar[1][0]-=1;
         break;
       case 1:
+        ar[1][0]-=1;
         ar[1][1]+=1;
         break;
       case 2:
-        ar[1][0]+=1;
+        ar[1][1]+=1;
         break;
       case 3:
+        ar[1][0]+=1;
+        ar[1][1]+=1;
+        break;
+      case 4:
+        ar[1][0]+=1;
+        break;
+      case 5:
+        ar[1][0]+=1;
+        ar[1][1]-=1;
+        break;
+      case 6:
+        ar[1][1]-=1;
+        break;
+      case 7:
+        ar[1][0]-=1;
         ar[1][1]-=1;
         break;
     }

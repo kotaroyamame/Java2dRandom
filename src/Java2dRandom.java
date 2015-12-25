@@ -9,7 +9,7 @@ public class Java2dRandom extends JPanel{
     frame.getContentPane().add(app);
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setBounds(10, 10, 800, 1100);
+    frame.setBounds(10, 10, 1200, 800);
     frame.setTitle("ランダム可視化");
     frame.setVisible(true);
     frame.setResizable(false);
