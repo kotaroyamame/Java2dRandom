@@ -12,19 +12,20 @@ public class Java2dRandom extends JPanel{
     frame.getContentPane().add(app);
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setBounds(10, 10, 1200, 800);
+    frame.setBounds(0, 0, 1200, 800);
     frame.setTitle("ランダム可視化");
     frame.setVisible(true);
     frame.setResizable(false);
     
     PaintOrisinal pa=new PaintOrisinal(frame);
-    for(int i=0;i<10000000;i++){
+    for(int i=0;i<100000;i++){
       pa.paintComponent(frame.getGraphics());
-      try {
-        Thread.sleep(5);
-      } catch (InterruptedException e) {
-          e.printStackTrace();
-      }
+      //pa.paint1(frame.getGraphics(),i);
+//      try {
+//        Thread.sleep(0);
+//      } catch (InterruptedException e) {
+//          e.printStackTrace();
+//      }
     }
   }
     
