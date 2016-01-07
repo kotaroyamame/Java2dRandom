@@ -66,14 +66,11 @@ public class PaintOrisinal extends JPanel{
   public void paintComponent(Graphics g_){
     Graphics2D g = (Graphics2D)g_;
    // Random rnd = new SecureRandom();
-    Random rnd = new MTRandom();
     //Random rnd = new Random();
     //for(int i=0;i<10;i++){
-    int ran;
     //do{
       //ran = (int)(Math.random()*8);
-      ran = rnd.nextInt(8);
-      System.out.println(ran);
+      ran = rnd2.nextInt(8);
       //Math.floor(ran);
     //}while(Math.abs(old-ran)==2);//一回前の道を逆戻りしない設定
     old=ran;

@@ -18,14 +18,14 @@ public class Java2dRandom extends JPanel{
     frame.setResizable(false);
     
     PaintOrisinal pa=new PaintOrisinal(frame);
-    for(int i=0;i<100000;i++){
+    for(int i=0;i<30000000;i++){
       pa.paintComponent(frame.getGraphics());
       //pa.paint1(frame.getGraphics(),i);
-//      try {
-//        Thread.sleep(0);
-//      } catch (InterruptedException e) {
-//          e.printStackTrace();
-//      }
+      try {
+        Thread.sleep(1);
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      }
     }
   }
     
